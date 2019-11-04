@@ -109,21 +109,15 @@ def drop_extra_columns(data):
 # Select columns that should be numeric and
 # convert the data to specified type
 def set_correct_types(data):
-    str_columns = ['paid', 'higher', 'internet']
-    for col in str_columns:
-        for elem in data[col]:
-            if str(elem) == 'no': elem = 0
-            elif str(elem) == 'yes': elem = 1
-            else: elem = 0
+    booles = {'no': 0, 'yes': 1}
 
     for col in list(data.columns):
         if ('Medu' in col or 'Fedu' in col or 'studytime' in col
                 or 'G1' in col or 'G2' in col or 'G3' in col):
             data[col] = data[col].astype(int)
-
-        # TODO: Overflow all values into columns, why?
-        # elif 'paid' in col or 'higher' in col or 'internet' in col:
-        #     data[col] = data[col].astype(str)
+        elif 'paid' in col or 'higher' in col or 'internet' in col:
+            data[col].replace(booles, inplace=True)
+            data[col] = data[col].astype(bool)
         else: continue
 
     return data
@@ -139,7 +133,6 @@ def main():
 
     # data = del_outlying_points(data)
     # visual_histograms(data['G3'], 19, 'Grades', 'Final grade')
-    #
     # building_categories(data)
 
     terminator_training(data)
