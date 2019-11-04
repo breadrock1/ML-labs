@@ -59,31 +59,31 @@ def terminator_training(data):
     plt.show()
 
 
-# Trying find relationships
-def building_categories(data):
-    types = data.dropna(subset=['G3'])
-    types = types['studytime'].value_counts()
-    types = list(types[types.values > 10].index)
-
-    figsize(20, 12)
-
-    for b_type in types:
-        subset = data[data['studytime'] == b_type]
-        sns.kdeplot(subset['G3'].dropna(), label=b_type, snade=False, alpha=0.8)
-
-    plt.xlabel('Final grade', size=20)
-    plt.ylabel('Study', size=12)
-    plt.title('Check relationships between study time and grades', size=20)
-
-
-# Trying delete defects
-def del_outlying_points(data):
-    bottom_boundary = data['G3'].describe()['25%']
-    # upper_boundary = data['G3'].describe()['max']
-    # iqr = upper_boundary - upper_boundary
-    data = data[(data['G3'] > bottom_boundary)]
-
-    return data
+# # Trying find relationships
+# def building_categories(data):
+#     types = data.dropna(subset=['G3'])
+#     types = types['studytime'].value_counts()
+#     types = list(types[types.values > 10].index)
+#
+#     figsize(20, 12)
+#
+#     for b_type in types:
+#         subset = data[data['studytime'] == b_type]
+#         sns.kdeplot(subset['G3'].dropna(), label=b_type, snade=False, alpha=0.8)
+#
+#     plt.xlabel('Final grade', size=20)
+#     plt.ylabel('Study', size=12)
+#     plt.title('Check relationships between study time and grades', size=20)
+#
+#
+# # Trying delete defects
+# def del_outlying_points(data):
+#     bottom_boundary = data['G3'].describe()['25%']
+#     # upper_boundary = data['G3'].describe()['max']
+#     # iqr = upper_boundary - upper_boundary
+#     data = data[(data['G3'] > bottom_boundary)]
+#
+#     return data
 
 
 # Construct histograms for src data
