@@ -1,6 +1,8 @@
 # ML_NeighborsClassifier
 Machine learning. Trying to classify datasets
 
+lab1 - KNN 
+lab2 - Pipeline 
 
 Lits and useful links:
   https://habr.com/ru/post/448892/
