@@ -23,6 +23,9 @@ Compare the quality of work and the training time (% time at the beginning of th
 Collect a set of photos of your team members.
 Train the neuron so that she will classify the new photos of the participants well.
 
+## lab6 - NLP
+Classify Russian texts into several categories. It is best if the body of the texts is really large. To pre-process texts: normalization, lemmatization, etc. Compare embeddings. Try several classification methods.
+
 Lits and useful links:
   
 	https://habr.com/ru/post/448892/
