@@ -1,4 +1,4 @@
-# ML_NeighborsClassifier
+# Machine Learning Labs
 Machine Learning. This is set of laboratory tasks of Machine Learning.
 
 ## lab1 - KNN
