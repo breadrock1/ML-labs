@@ -1,5 +1,11 @@
 # Machine Learning Labs
 
+![GitHub](https://badgen.net/badge/icon/github?icon=github&label)
+![version](https://img.shields.io/badge/version-1.0-blue)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)
+
 Machine Learning. This is set of laboratory tasks of Machine Learning.
 
 ## Contents
